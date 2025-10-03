@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <script>
+        var nome = prompt("Nome:")
+        var salBruto = parseFloat(prompt("Salário:"))
+
+        alert("Escolha uma opção:\n 1 - INSS\n 2 - Vale\n 3 - Bônus\n 4 - Cargo")
+
+        var op = parseInt(prompt("Escolha uma opção:"))
+
+        switch (op) {
+            case 1:
+                var inss 
+                if (salBruto >= 3000) {
+                    inss = salBruto * 0.11
+                } else if (salBruto >= 2000) {
+                    inss = salBruto * 0.09
+                } else {
+                    inss = salBruto * 0.08
+                }
+                document.write("INSS: "+inss)
+                break
+            case 2:
+                var vale
+                if (salBruto >= 1500) {
+                     vale = salBruto * 0.06
+                } else {
+                     vale = salBruto * 0.05
+                }
+                document.write("Vale: "+vale)  
+                break 
+            case 3:
+                var bonus
+                if (salBruto >= 3000) {
+                     bonus = 500
+                } else if(salBruto >= 2000){
+                     bonus = 300
+                } else {
+                     bonus = 200
+                }
+                document.write("Bônus: "+bonus)
+                break
+            case 4:
+                var cargo
+                 if (salBruto >= 3000) {
+                    cargo = "Acionista"
+                 } else if(salBruto >= 2000){
+                  cargo = "Gerente"
+                 } else {
+                     cargo = "Vendedor"
+                 }
+                document.write("Cargo: "+cargo)
+                break
+        
+            default:
+                document.write("Opção Inválida")
+                break;
+            }
+/*
+        var inss
+        if (salBruto >= 3000) {
+            inss = salBruto * 0.11
+        } else if(salBruto >= 2000){
+            inss = salBruto * 0.09
+        } 
+        else {
+            inss = salBruto * 0.08
+        }
+        var vale
+        if (salBruto >= 1500) {
+            vale = salBruto * 0.06
+        } else {
+            vale = salBruto * 0.05
+        }
+        var bonus
+        if (salBruto >= 3000) {
+            bonus = 500
+        } else if(salBruto >= 2000){
+            bonus = 300
+        } 
+        else {
+            bonus = 200
+        }
+        var cargo
+        if (salBruto >= 3000) {
+            cargo = "Acionista"
+        } else if(salBruto >= 2000){
+            cargo = "Gerente"
+        } 
+        else {
+            cargo = "Vendedor"
+        }
+        var liquido = salBruto - (inss + vale) + bonus
+
+        document.write("<p>Nome: "+nome+"</p>")
+        document.write("<p>Salário Bruto: "+salBruto+"</p>")
+        document.write("<p>Inss: "+inss.toFixed(2)+"</p>")
+        document.write("<p>Vale: "+vale.toFixed(2)+"</p>")
+        document.write("<p>Bônus: "+bonus.toFixed(2)+"</p>")
+        document.write("<p>Cargo: "+cargo+"</p>")
+        document.write("<p>Salário Líquido: "+liquido.toFixed(2)+"</p>") 
+        */
+    </script>
+</body>
+</html>

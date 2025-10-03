@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <script>
+     var nome = prompt("Digite seu nome:")
+    var idade = parseInt(prompt("Digite sua idade:"))
+    var peso = parseFloat(prompt("Digite seu peso (kg):"))
+    var altura = parseFloat(prompt("Digite sua altura (m):"))
+
+    var imc = peso / (altura * altura)
+
+    document.write("<h2>Olá, " + nome + "!</h2>")
+    document.write("<p>Idade: " + idade + " anos</p>")
+    document.write("<p>Seu IMC é: " + imc.toFixed(2) + "</p>")
+
+    if (imc < 18.5) {
+        document.write("<p>Classificação: Magreza</p>")
+        document.write("<p>Grau de obesidade: 0</p>")
+    } else if (imc >= 18.5 && imc <= 24.9) {
+        document.write("<p>Classificação: Normal</p>")
+        document.write("<p>Grau de obesidade: 0</p>")
+    } else if (imc >= 25 && imc <= 29.9) {
+        document.write("<p>Classificação: Sobrepeso</p>")
+        document.write("<p>Grau de obesidade: I</p>")
+    } else if (imc >= 30 && imc <= 39.9) {
+        document.write("<p>Classificação: Obesidade</p>")
+        document.write("<p>Grau de obesidade: II</p>")
+    } else if (imc >= 40) {
+        document.write("<p>Classificação: Obesidade Grave</p>")
+        document.write("<p>Grau de obesidade: III</p>")
+    } else {
+        document.write("<p>Não foi possível calcular.</p>")
+    }
+    
+    </script>
+</body>
+</html>

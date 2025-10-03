@@ -1,0 +1,39 @@
+<!--
+    Escrever um script que tenha a entrada de 10 números inteiros e mostrar na tela somente os números múltiplos de 5. Use o Array. 
+-->
+<script>
+    let numeros = []
+    let multiplos = []
+
+    for (let i = 0; i < 10; i++) {
+        let numero = parseInt(prompt(`Digite o número ${i}:`))
+        numeros.push(numero)
+
+        if (numero % 5 === 0) {
+            multiplos.push(numero)
+        }
+    }
+
+    console.log("Números digitados pelo usuário:")
+    for (let i = 0; i < numeros.length; i++) {
+    console.log(numeros[i])
+    }
+
+   console.log("Números múltiplos de 5:")
+
+   document.write("Os números múltiplos de 5 são: ")
+
+    for (let i = 0; i < multiplos.length; i++) {
+        console.log(multiplos[i]) 
+        document.write("<p>"+multiplos[i]+"</p>")
+    }
+    
+</script><html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"><head>
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
